@@ -10,6 +10,7 @@ BUT, that means that you have to somehow invalidate stale uris. The rails defaul
 http://assets1.example.com/images/someimage.png?12341234
 
 from api documentation at http://api.rubyonrails.org/classes/ActionView/Helpers/AssetTagHelper.html#M001720
+
     By default, Rails appends asset‘s timestamps to all asset paths. This allows you to set a cache-expiration 
     date for the asset far into the future, but still be able to instantly invalidate it by simply updating the
     file (and hence updating the timestamp, which then updates the URL as the timestamp is part of that, which 
@@ -17,8 +18,10 @@ from api documentation at http://api.rubyonrails.org/classes/ActionView/Helpers/
   
 This plugin turns that around and does it like:
 http://assets1.example.com/12341234/images/someimage.png
+
 why?
 -----
+
 Basically it comes down to stylesheets.  If you are doing things the way you should be, then most of your 
 layout images are being linked to from your external css files.   
 so for example you have:
