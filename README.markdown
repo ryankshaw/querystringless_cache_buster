@@ -62,10 +62,5 @@ In order to use this plugin you need to add:
 to the /config/environments/production.rb file 
 (as well as any other envirnments you want to use  )
 
-Example
-=======
 
-Example goes here.
-
-
-Copyright (c) 2009 [Ryan Shaw], released under the MIT license
+Copyright (c) 2009 Ryan Shaw, released under the MIT license
