@@ -23,13 +23,13 @@ layout images are being linked to from your external css files.
 so for example you have:
 in application.html.erb
 
-  <link href="/stylesheets/application.css?1249677471" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/application.css?1249677471" media="screen" rel="stylesheet" type="text/css" />
 
 and in application.css you have:
 
-  body { 
-    background-image: url("../images/bg.png"); 
-  }
+    body { 
+      background-image: url("../images/bg.png"); 
+    }
 
 The problem is that, while application.css will always be instantly invalidated if it changes, bg.png will 
 never be invalidated because it is being served as http://example.com/images/bg.png.  This is because only 
@@ -41,13 +41,13 @@ When you use this plugin to flip the location of the cachebuster in the urls gen
 asset_tag_helpers and you do the same thing:
 in application.html.erb
 
-  <link href="1249677471/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="1249677471/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
 
 and in application.css you have:
 
-  body { 
-    background-image: url("../images/bg.png"); 
-  }
+    body { 
+      background-image: url("../images/bg.png"); 
+    }
 
 The absolute uri of the background-image being linked to is now:
 http://example.com/1249677471/images/bg.png
