@@ -1,5 +1,5 @@
-QuerystringlessCacheBuster
-==========================
+Querystringless Cache Buster
+============================
 
 Why use this plugin?
 
@@ -19,7 +19,7 @@ from api documentation at http://api.rubyonrails.org/classes/ActionView/Helpers/
 This plugin turns that around and does it like:
 http://assets1.example.com/12341234/images/someimage.png
 
-why?
+Why?
 -----
 
 Basically it comes down to stylesheets.  If you are doing things the way you should be, then most of your 
@@ -69,7 +69,7 @@ public directory (or if you set ENV["RAILS_ASSET_ID"] it will use that)
 
 In order to use this plugin you need to add:
 
-  ENV["RAILS_USE_QUERYSTRINGLESS_CACHE_BUSTER"] =  "true"
+    ENV["RAILS_USE_QUERYSTRINGLESS_CACHE_BUSTER"] =  "true"
 
 to the /config/environments/production.rb file 
 (as well as any other envirnments you want to use  )
